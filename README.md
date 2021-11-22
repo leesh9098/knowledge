@@ -5,7 +5,7 @@
 ``` JavaScript
 const ref = useRef(null)
 
-    const scrollNextSection = () => {
-        ref.current.scrollIntoView({ behavior: "smooth" })
-    }
+const scrollNextSection = () => {
+    ref.current.scrollIntoView({ behavior: "smooth" })
+}
 ```
