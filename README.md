@@ -16,8 +16,8 @@ return <div ref={ref} onCilck={scrollNextSection}></div>
 
 - PC 브라우저에서 뒤로가기 버튼 비활성화
 ``` JSX
- {*window.*}history.pushState(null, null, {*window.*}location.href);
+ {/*window.*/}history.pushState(null, null, {/*window.*/}location.href);
  window.onpopstate = () => {
-    {*window.}*history.go(1);
+    {/*window.*/}history.go(1);
 };
 ```
