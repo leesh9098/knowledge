@@ -8,7 +8,7 @@ import { useRef } from 'react'
 const ref = useRef(null);
 
 const scrollNextSection = () => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
+    ref.current.scrollIntoView({ behavior: "smooth" }); // 부드러운 화면 
 }
 
 return <div ref={ref} onCilck={scrollNextSection}></div>
