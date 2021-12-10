@@ -14,6 +14,41 @@ const scrollNextSection = () => {
 return <div ref={ref} onCilck={scrollNextSection}></div>
 ```
 
+- Node JS 서버와 통신할 때 필요한 Proxy (setupProxy.js)
+``` JSX
+// src폴더 안에 파일 생성
+// package.json에 "proxy": "url" 
+const { createProxyMiddleware } = require('http-proxy-middleware')
+module.exports = function (app) {
+    app.use(createProxyMiddleware('/path', {
+        target: 'url'
+        // changeOrigin: true
+    }));
+}
+```
+
+- express 서버 통신
+``` JavaScript
+// npm install express --save
+// npm install cors --save
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const port = 3001; // 포트 설정
+
+app.use(cors())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.post('path or url', (req, res) => {
+    res.send({data: req.body.data});
+});
+
+app.listen(port, () => {
+    console.log(`listening on ${port}`);
+});
+```
+
 ### JavaScript
 - PC 브라우저에서 뒤로가기 버튼 비활성화
 ``` JavaScript
