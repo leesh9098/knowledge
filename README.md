@@ -17,7 +17,7 @@ return <div ref={ref} onCilck={scrollNextSection}></div>
 - Node JS 서버와 통신할 때 필요한 Proxy (setupProxy.js)
 ``` JSX
 // src폴더 안에 파일 생성
-// package.json에 "proxy": "url" 
+// package.json에 "proxy": "url" 추가
 const { createProxyMiddleware } = require('http-proxy-middleware')
 module.exports = function (app) {
     app.use(createProxyMiddleware('/path', {
