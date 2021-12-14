@@ -14,6 +14,16 @@ const scrollNextSection = () => {
 return <div ref={ref} onCilck={scrollNextSection}></div>
 ```
 
+- ScrollAnimation 라이브러리 사용법
+``` JSX
+// npm install react-animate-on-scroll --save
+import ScrollAnimation from "react-animate-on-scroll";
+
+<ScrollAnimation
+    offset={} // default 150, px단위
+    animateIn="animate__fadeIn" // viewport안에 들어올 때 적용되는 animation ※'animate__'를 붙여줘야 적용됨
+    animateOut="animate__fadeOut" // viewport를 벗어날 때 적용되는 animation
+```
 - Node JS 서버와 통신할 때 필요한 Proxy (setupProxy.js)
 ``` JSX
 // src폴더 안에 파일 생성
