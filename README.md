@@ -1,7 +1,7 @@
 # knowledge
 
 ### React
-- React 프로젝트 내부에서 script 태그 사용시에 필요한 hook 함수
+- React 프로젝트 내부에서 script 태그 사용시에 필요한 hook 함수 (초기화)
 ``` JSX
 import { useState, useEffect } from "react";
 
